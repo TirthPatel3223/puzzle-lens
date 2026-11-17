@@ -2,7 +2,7 @@
   "name": "cube-scanner-web",
   "private": true,
   "version": "0.1.0",
-  "description": "Browser UI and synthetic-data renderer for the Cube Scanner: capture, 3D verification, solve and playback for the Maltese Gear Cube.",
+  "description": "Browser UI and synthetic-data renderer for Puzzle Lens: capture, 3D verification, solve and playback for the Maltese Gear Cube and the Tangram Cube Extreme.",
   "type": "module",
   "engines": {
     "node": ">=20.19"

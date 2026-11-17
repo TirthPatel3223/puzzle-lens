@@ -11,7 +11,7 @@ Each puzzle is a package ``scanner.puzzles.<key>`` with the same parts:
 
 Adding a puzzle: write those parts, then add it to REGISTRY below. The server mounts its router at
 /api/<id>/, ``python -m scanner.vision.train --puzzle <key>`` and ``python -m scanner.vision.evaluate
---puzzle <key>`` find its training and evaluation, and the web app lists it (web/src/puzzles/registry.ts).
+--puzzle <key>`` find its training and evaluation, and the web app lists it (web/src/app/puzzles.ts).
 """
 from __future__ import annotations
 

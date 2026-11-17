@@ -1,0 +1,19 @@
+node_modules/
+dist/
+coverage/
+*.log
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.venv/
+
+# Everything a run produces: renders, real photos, checkpoints, the solver's ladder cache
+data/
+
+# personal photos never go in the repo
+*.heic
+*.HEIC

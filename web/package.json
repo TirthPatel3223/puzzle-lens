@@ -1,0 +1,31 @@
+{
+  "name": "cube-scanner-web",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Browser UI and synthetic-data renderer for the Cube Scanner: capture, 3D verification, solve and playback for the Maltese Gear Cube.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "export:shared": "vitest run --config tools/vitest.config.ts"
+  },
+  "dependencies": {
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
+    "manifold-3d": "^3.5.4",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/three": "^0.187.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.6",
+    "vitest": "^5.1.0"
+  }
+}

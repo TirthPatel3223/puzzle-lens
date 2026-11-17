@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cube-scanner"
+version = "0.1.0"
+description = "Read a twisty puzzle from photos, check it on a 3D model, solve it (Maltese Gear Cube, Tangram Cube Extreme)."
+license = { text = "MIT" }
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.11",
+    "sympy>=1.14",
+    "pillow>=10",
+    "opencv-python>=4.9",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+# torch and torchvision: install the CUDA build matching your driver (the solver's value networks
+# and the vision models both use the GPU when there is one).
+gpu = ["torch>=2.2", "torchvision>=0.17"]
+datagen = ["playwright>=1.44"]
+test = ["pytest>=8", "httpx>=0.27"]
+
+[tool.setuptools.packages.find]
+include = ["scanner*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["solver: needs the built ladder in data/ladders and takes a while"]

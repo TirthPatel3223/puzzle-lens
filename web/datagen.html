@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cube Scanner · synthetic photos</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #101114;
+        color: #d7dae0;
+        font: 14px/1.5 system-ui, sans-serif;
+      }
+      .frame {
+        position: relative;
+        width: min(92vmin, 900px);
+        aspect-ratio: 1;
+        margin: 16px auto 8px;
+      }
+      .frame canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .bar {
+        display: none;
+        gap: 12px;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 16px 16px;
+      }
+      body.viewer .bar {
+        display: flex;
+      }
+      button {
+        font: inherit;
+        padding: 6px 14px;
+        border-radius: 8px;
+        border: 1px solid #3a3d45;
+        background: #1c1e24;
+        color: inherit;
+        cursor: pointer;
+      }
+      #info {
+        flex-basis: 100%;
+        text-align: center;
+        color: #9aa0ab;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <canvas id="shot"></canvas>
+      <canvas id="overlay"></canvas>
+    </div>
+    <div class="bar">
+      <button id="prev">Previous</button>
+      <button id="next">Next sample</button>
+      <label><input id="labels" type="checkbox" checked /> draw the labels</label>
+      <div id="info"></div>
+    </div>
+    <script type="module" src="/src/datagen/main.ts"></script>
+  </body>
+</html>

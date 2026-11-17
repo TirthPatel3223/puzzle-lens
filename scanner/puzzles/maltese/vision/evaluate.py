@@ -1,7 +1,7 @@
 """Score the trained networks the way they are used: from the picture alone.
 
-    python -m scanner.vision.evaluate faces --puzzle maltese --data C:/Users/tirth/cube_scanner_data/synth/v1/val
-    python -m scanner.vision.evaluate scans --puzzle maltese --data C:/Users/tirth/cube_scanner_data/synth/v1/scans [--any-order]
+    python -m scanner.vision.evaluate faces --puzzle maltese --data ../puzzle-data/maltese/v1/val
+    python -m scanner.vision.evaluate scans --puzzle maltese --data ../puzzle-data/maltese/v1/scans [--any-order]
     python -m scanner.vision.evaluate real --puzzle maltese                  # the labelled real scans kept from the app
 
 ``faces``  every picture is located and read with no help; reports how often each kind of

@@ -10,6 +10,12 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-three.js-3178C6?logo=typescript&logoColor=white)](https://threejs.org/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
+<br>
+
+<img src="docs/images/tangram-demo.gif" alt="Six photos of a scrambled Tangram Cube Extreme are read, checked on the 3D model, and solved move by move" width="880">
+
+<sub>Six rendered photos of a scrambled Tangram Cube Extreme: read in about a second, checked on the 3D model, then solved move by move.</sub>
+
 </div>
 
 Take six photos of a scrambled puzzle, one per face, in any order and any way up. Puzzle Lens reads every sticker with neural networks trained only on synthetic renders. It works out which photo shows which face and snaps the readings to the most likely *legal* state. You can check the result on an exact 3D model of the puzzle, and a hierarchical subgroup solver then plays a verified solution back in 3D.
@@ -132,6 +138,10 @@ The app has three steps: **Photos → Check → Solve**. The side panel is on th
 
 ### 1. Photos
 
+<img src="docs/images/maltese-photos.png" alt="The Photos step with six photos of a Maltese Gear Cube, each face outlined where the network found it" width="880">
+
+<sub>Six rendered photos from the evaluation set, uploaded in shuffled order. Each face is outlined where the network found it.</sub>
+
 - **One photo of each face**, uploaded or taken with the webcam, in any order and any way up.
 - **Square-on, filling most of the frame**, with the face's edges in view. Hold the cube or set it on a table, and keep your fingers off the face's edges.
 - **Even light**, without strong glare on the stickers.
@@ -147,6 +157,8 @@ There are two other ways in:
 
 Each face is shown as a card: the photo, flattened and turned upright, with a marker on every sticker in the colour the scanner chose.
 
+<img src="docs/images/maltese-check.png" alt="The Check step: each photo flattened, with a ring on every sticker and gear, next to the rebuilt 3D model" width="880">
+
 | Mark | Meaning |
 |---|---|
 | plain ring | the decoded colour |
@@ -161,6 +173,8 @@ Each face is shown as a card: the photo, flattened and turned upright, with a ma
 The **3D model** rebuilds on every change. The **legality check** explains each problem in words and circles the stickers involved. Once the state is legal you can solve it, copy the state, save the scan as JSON, or keep the photos as labelled data.
 
 ### 3. Solve
+
+<img src="docs/images/maltese-solve.png" alt="The Solve step: the next move in large type and in words, animated on the 3D model with the turning layer highlighted" width="880">
 
 - The app tells you **how to hold the puzzle** and which of your photos goes where.
 - Each move is shown large, in notation and in words (*"Left (purple) face: 3 quarter turns counterclockwise"*). It is animated on the model, with the layer that turns next highlighted.
@@ -217,6 +231,11 @@ The decoder's invariants are proven from the order of the move group (`tools/der
 ## Under the hood: Tangram Cube Extreme
 
 A 60° corner turn tilts pieces out of the cube's outline, so the puzzle changes shape. The scanner reads it in any shape.
+
+<p>
+  <img src="docs/images/tangram-check.png" alt="Tangram Check step: circles mark flat stickers, diamonds mark stickers tilted out of the face" width="49%">
+  <img src="docs/images/tangram-solve.png" alt="Tangram Solve step: a flip of the red-green edge, highlighted on the 3D model" width="49%">
+</p>
 
 | Stage | What happens | Where |
 |---|---|---|

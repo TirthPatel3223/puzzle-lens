@@ -1,7 +1,7 @@
 """Score the Tangram Cube Extreme's networks the way they are used: from the picture alone.
 
-    python -m scanner.vision.evaluate photos --puzzle tangram --data C:/Users/tirth/cube_scanner_data/tangram/v1/val
-    python -m scanner.vision.evaluate scans  --puzzle tangram --data C:/Users/tirth/cube_scanner_data/tangram/v1/scans
+    python -m scanner.vision.evaluate photos --puzzle tangram --data ../puzzle-data/tangram/v1/val
+    python -m scanner.vision.evaluate scans  --puzzle tangram --data ../puzzle-data/tangram/v1/scans
     python -m scanner.vision.evaluate real   --puzzle tangram         # labelled real scans kept from the app
 
 ``photos``  every picture is located and read with no help: how often the turning corner is found (the

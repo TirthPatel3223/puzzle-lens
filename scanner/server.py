@@ -22,7 +22,7 @@ from scanner.puzzles import DEFAULT, REGISTRY, create_service
 def create_app(solver=None, vision=None, services: dict | None = None) -> FastAPI:
     """``solver`` and ``vision`` stand in for the Maltese Gear Cube's (tests, ``serve --warm``);
     ``services`` maps puzzle ids to ready-made services (anything else is created with defaults)."""
-    app = FastAPI(title="Cube Scanner", version=__version__)
+    app = FastAPI(title="Puzzle Lens", version=__version__)
     services = dict(services or {})
     if DEFAULT not in services:
         services[DEFAULT] = create_service(DEFAULT, solver=solver, vision=vision)

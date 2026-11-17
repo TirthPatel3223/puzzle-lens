@@ -28,7 +28,7 @@ def _serve(args: argparse.Namespace) -> None:
               "    cd web && npm install && npm run build\n"
               "or run the development server (cd web && npm run dev) and open http://localhost:5173", flush=True)
     else:
-        print(f"Cube Scanner: open {url} in your browser (Ctrl+C stops the server)", flush=True)
+        print(f"Puzzle Lens: open {url} in your browser (Ctrl+C stops the server)", flush=True)
     solver = SolverService(beam=args.beam)
     app = create_app(solver)
     if args.warm:

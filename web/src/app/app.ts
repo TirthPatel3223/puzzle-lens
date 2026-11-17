@@ -133,7 +133,7 @@ export class App {
   }
 
   private applyTitle(): void {
-    document.title = `Cube Scanner · ${this.puzzle.title}`;
+    document.title = `Puzzle Lens · ${this.puzzle.title}`;
   }
 
   /** Switch to another puzzle: the photos and everything read from them are dropped. */
@@ -207,7 +207,7 @@ export class App {
     const head = document.createElement('header');
     head.className = 'panel__header';
     head.innerHTML = `
-      <p class="eyebrow eyebrow--brand">Cube Scanner</p>
+      <p class="eyebrow eyebrow--brand">Puzzle Lens</p>
       <h1 class="brand__title">${this.puzzle.title}</h1>
       <p class="brand__meta">${this.puzzle.tagline}</p>`;
     if (this.puzzles.length > 1) {

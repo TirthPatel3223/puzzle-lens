@@ -1,7 +1,7 @@
 """Train the Tangram Cube Extreme's two networks on the synthetic photos.
 
-    python -m scanner.vision.train locator --puzzle tangram --data C:/Users/tirth/cube_scanner_data/tangram/v1 --epochs 10
-    python -m scanner.vision.train reader  --puzzle tangram --data C:/Users/tirth/cube_scanner_data/tangram/v1 --epochs 8
+    python -m scanner.vision.train locator --puzzle tangram --data ../puzzle-data/tangram/v1 --epochs 10
+    python -m scanner.vision.train reader  --puzzle tangram --data ../puzzle-data/tangram/v1 --epochs 8
 
 ``--data`` holds ``train/`` and ``val/`` (tools/gen_dataset.py --puzzle tangram). The best checkpoint on the
 validation set is written to data/checkpoints/tangram/<what>.pt, with its scores beside it as JSON.

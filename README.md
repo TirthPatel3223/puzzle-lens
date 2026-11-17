@@ -94,7 +94,7 @@ cd ..
 
 ### 2. Get the trained models
 
-The networks and solver ladders are about 1 GB, so they are not stored in git. They belong in `data/` (or wherever `CUBE_SCANNER_DATA` points).
+The networks and solver ladders are about 1 GB unpacked, so they are not stored in git. They belong in `data/` (or wherever `CUBE_SCANNER_DATA` points).
 
 **Option A: download them** from the [latest release](https://github.com/TirthPatel3223/puzzle-lens/releases/latest):
 
@@ -111,11 +111,11 @@ python -m zipfile -e ladder-tangram.zip .
 
 > On Windows PowerShell, type `curl.exe` instead of `curl`.
 
-| Archive | Size | Unpacks to |
-|---|---|---|
-| `checkpoints.zip` | ~200 MB | `data/checkpoints/` (Maltese `locator.pt`, `reader.pt`), `data/checkpoints/tangram/` |
-| `ladder-maltese.zip` | ~515 MB | `data/ladders/learned_r7/` |
-| `ladder-tangram.zip` | ~315 MB | `data/ladders/tangram_extreme/learned_r7/` |
+| Archive | Download | Unpacked | Unpacks to |
+|---|---|---|---|
+| `checkpoints.zip` | 193 MB | ~200 MB | `data/checkpoints/` (Maltese `locator.pt`, `reader.pt`), `data/checkpoints/tangram/` |
+| `ladder-maltese.zip` | 290 MB | ~540 MB | `data/ladders/learned_r7/` |
+| `ladder-tangram.zip` | 251 MB | ~330 MB | `data/ladders/tangram_extreme/learned_r7/` |
 
 **Option B: build them yourself.** See [Training your own models](#training-your-own-models) and [Building the solver ladders](#building-the-solver-ladders).
 

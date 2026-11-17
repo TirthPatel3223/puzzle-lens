@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 222" width="960" height="222" role="img" aria-labelledby="title desc">
+  <title id="title">Puzzle Lens pipeline</title>
+  <desc id="desc">Six photos, find the face, flatten and cut, read stickers, fit the photos together, decode to the most likely legal state, check in 3D, solve, follow along.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8b949e"/>
+    </marker>
+    <style>
+      text { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #ffffff; }
+      .t { font-size: 15px; font-weight: 700; text-anchor: middle; }
+      .s { font-size: 11.5px; text-anchor: middle; fill-opacity: 0.9; }
+      .n { font-size: 11px; font-weight: 700; text-anchor: middle; }
+      .badge { fill: #ffffff; fill-opacity: 0.25; }
+      .flow { stroke: #8b949e; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .legend { font-size: 13px; fill: #8b949e; }
+      .you { fill: #059669; } .vision { fill: #2563eb; } .decoder { fill: #c2410c; } .solver { fill: #7c3aed; }
+    </style>
+  </defs>
+
+  <!-- Row 1, left to right -->
+  <g>
+    <rect class="you" x="12" y="12" width="168" height="68" rx="10"/>
+    <circle class="badge" cx="30" cy="30" r="10"/><text class="n" x="30" y="34">1</text>
+    <text class="t" x="96" y="46">Six photos</text>
+    <text class="s" x="96" y="66">any order, any way up</text>
+  </g>
+  <g>
+    <rect class="vision" x="204" y="12" width="168" height="68" rx="10"/>
+    <circle class="badge" cx="222" cy="30" r="10"/><text class="n" x="222" y="34">2</text>
+    <text class="t" x="288" y="46">Find the face</text>
+    <text class="s" x="288" y="66">corner heatmap CNN</text>
+  </g>
+  <g>
+    <rect class="vision" x="396" y="12" width="168" height="68" rx="10"/>
+    <circle class="badge" cx="414" cy="30" r="10"/><text class="n" x="414" y="34">3</text>
+    <text class="t" x="480" y="46">Flatten &amp; cut</text>
+    <text class="s" x="480" y="66">one crop per sticker</text>
+  </g>
+  <g>
+    <rect class="vision" x="588" y="12" width="168" height="68" rx="10"/>
+    <circle class="badge" cx="606" cy="30" r="10"/><text class="n" x="606" y="34">4</text>
+    <text class="t" x="672" y="46">Read stickers</text>
+    <text class="s" x="672" y="66">colour probabilities</text>
+  </g>
+  <g>
+    <rect class="decoder" x="780" y="12" width="168" height="68" rx="10"/>
+    <circle class="badge" cx="798" cy="30" r="10"/><text class="n" x="798" y="34">5</text>
+    <text class="t" x="864" y="46">Fit together</text>
+    <text class="s" x="864" y="66">which face, which way up</text>
+  </g>
+
+  <!-- Row 2, right to left -->
+  <g>
+    <rect class="decoder" x="780" y="142" width="168" height="68" rx="10"/>
+    <circle class="badge" cx="798" cy="160" r="10"/><text class="n" x="798" y="164">6</text>
+    <text class="t" x="864" y="176">Decode</text>
+    <text class="s" x="864" y="196">most likely legal state</text>
+  </g>
+  <g>
+    <rect class="you" x="588" y="142" width="168" height="68" rx="10"/>
+    <circle class="badge" cx="606" cy="160" r="10"/><text class="n" x="606" y="164">7</text>
+    <text class="t" x="672" y="176">Check in 3D</text>
+    <text class="s" x="672" y="196">fix anything by hand</text>
+  </g>
+  <g>
+    <rect class="solver" x="396" y="142" width="168" height="68" rx="10"/>
+    <circle class="badge" cx="414" cy="160" r="10"/><text class="n" x="414" y="164">8</text>
+    <text class="t" x="480" y="176">Solve</text>
+    <text class="s" x="480" y="196">subgroup ladder, verified</text>
+  </g>
+  <g>
+    <rect class="you" x="204" y="142" width="168" height="68" rx="10"/>
+    <circle class="badge" cx="222" cy="160" r="10"/><text class="n" x="222" y="164">9</text>
+    <text class="t" x="288" y="176">Follow along</text>
+    <text class="s" x="288" y="196">animated, move by move</text>
+  </g>
+
+  <!-- Arrows -->
+  <path class="flow" d="M180,46 H202"/>
+  <path class="flow" d="M372,46 H394"/>
+  <path class="flow" d="M564,46 H586"/>
+  <path class="flow" d="M756,46 H778"/>
+  <path class="flow" d="M864,80 V140"/>
+  <path class="flow" d="M780,176 H758"/>
+  <path class="flow" d="M588,176 H566"/>
+  <path class="flow" d="M396,176 H374"/>
+
+  <!-- Legend -->
+  <g>
+    <rect class="you" x="16" y="146" width="12" height="12" rx="3"/><text class="legend" x="34" y="157">You</text>
+    <rect class="vision" x="96" y="146" width="12" height="12" rx="3"/><text class="legend" x="114" y="157">Vision</text>
+    <rect class="decoder" x="16" y="172" width="12" height="12" rx="3"/><text class="legend" x="34" y="183">Decoder</text>
+    <rect class="solver" x="96" y="172" width="12" height="12" rx="3"/><text class="legend" x="114" y="183">Solver</text>
+  </g>
+</svg>

@@ -46,17 +46,7 @@ The Tangram Cube Extreme changes shape as you turn it, and the scanner reads it 
 
 ## How it works
 
-```mermaid
-flowchart LR
-    A["6 photos<br/>any order, any way up"] --> B["Find the face<br/>heatmap CNN"]
-    B --> C["Flatten and cut<br/>one crop per sticker"]
-    C --> D["Read<br/>colour probabilities"]
-    D --> E["Fit the photos together<br/>which face, which way up"]
-    E --> F["Decode<br/>most likely legal state"]
-    F --> G["Check on the 3D model<br/>fix anything by hand"]
-    G --> H["Solve<br/>subgroup ladder"]
-    H --> I["Follow along<br/>animated in 3D"]
-```
+![The pipeline: six photos, find the face, flatten and cut, read stickers, fit the photos together, decode to the most likely legal state, check in 3D, solve, follow along](docs/images/pipeline.svg)
 
 **The 3D engine is the ground truth.** The same engine that draws the puzzle in the browser renders the training photos (so every label is exact), exports the sticker layout the Python side reads, and replays every solution before you see it.
 
